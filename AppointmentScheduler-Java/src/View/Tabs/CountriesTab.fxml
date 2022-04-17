@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="720.0" prefWidth="1180.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Tabs.CountriesTab">
+    <children>
+        <GridPane prefHeight="661.0" prefWidth="1000.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="33.3333333" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="33.3333334" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="33.3333333" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+            </rowConstraints>
+            <children>
+                <VBox id="border" alignment="CENTER" maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" GridPane.vgrow="ALWAYS">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                            <VBox.margin>
+                                <Insets left="7.0" right="7.0" top="10.0" />
+                            </VBox.margin>
+                            <children>
+                                <Label alignment="CENTER" text="Countries" />
+                            </children>
+                        </HBox>
+                        <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                            <children>
+                                <ListView id="border" fx:id="listCountries" maxHeight="1.7976931348623157E308" maxWidth="300.0" prefHeight="360.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                    <VBox.margin>
+                                        <Insets left="3.0" right="3.0" />
+                                    </VBox.margin>
+                                    <padding>
+                                        <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                                    </padding>
+                                </ListView>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                                    <children>
+                                        <Label fx:id="statusListView" text="Status ..." />
+                                    </children>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <VBox.margin>
+                                        <Insets left="7.0" />
+                                    </VBox.margin>
+                                </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets left="7.0" right="7.0" />
+                           </VBox.margin>
+                           <children>
+                              <Button fx:id="deleteCountry" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Delete" />
+                           </children>
+                        </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                    <GridPane.margin>
+                        <Insets bottom="3.0" left="1.0" right="1.0" />
+                    </GridPane.margin>
+                </VBox>
+                <VBox id="border" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                            <children>
+                                <Label text="View/Edit" />
+                            </children>
+                            <VBox.margin>
+                                <Insets left="7.0" right="7.0" top="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <VBox id="border" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="100.0" prefWidth="100.0" VBox.vgrow="NEVER">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <Label text="Country ID:">
+                                            <HBox.margin>
+                                                <Insets left="5.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="editCountryId" alignment="CENTER" disable="true" promptText="AUTO">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="3.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <Label text="Name:">
+                                            <HBox.margin>
+                                                <Insets left="30.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="editCountryName">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="7.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <Label text="Created:">
+                                            <HBox.margin>
+                                                <Insets left="20.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="editCountryCreated" disable="true">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="7.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                    <VBox.margin>
+                                        <Insets top="7.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Label text="Created By:">
+                                            <HBox.margin>
+                                                <Insets left="4.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="editCountryCreatedBy" disable="true">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                    <VBox.margin>
+                                        <Insets top="7.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Label text="Updated:">
+                                            <HBox.margin>
+                                                <Insets left="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="editCountryUpdated" disable="true">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                    <VBox.margin>
+                                        <Insets top="7.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Label text="Updated By:" />
+                                        <TextField fx:id="editCountryUpdatedBy" disable="true">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets top="7.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label fx:id="editValidation" />
+                           </children>
+                        </HBox>
+                                <HBox id="3" alignment="CENTER" prefHeight="40.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <ButtonBar buttonMinWidth="80.0" maxWidth="1.7976931348623157E308" prefHeight="40.0">
+                                            <buttons>
+                                                <Button fx:id="editSave" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Save" />
+                                                <Button fx:id="editCancel" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Cancel" />
+                                            </buttons>
+                                            <HBox.margin>
+                                                <Insets left="70.0" right="7.0" />
+                                            </HBox.margin>
+                                            <padding>
+                                                <Insets bottom="3.0" right="20.0" top="3.0" />
+                                            </padding>
+                                        </ButtonBar>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="7.0" />
+                                    </VBox.margin>
+                                </HBox>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="312.0" left="20.0" right="20.0" top="20.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets top="7.0" />
+                            </padding>
+                        </VBox>
+                    </children>
+                    <GridPane.margin>
+                        <Insets bottom="3.0" left="1.0" right="1.0" />
+                    </GridPane.margin>
+                </VBox>
+                <VBox id="border" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                            <children>
+                                <Label text="New" />
+                            </children>
+                            <VBox.margin>
+                                <Insets left="7.0" right="7.0" top="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <VBox id="border" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="100.0" prefWidth="100.0" VBox.vgrow="NEVER">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <Label text="Country ID:">
+                                            <HBox.margin>
+                                                <Insets left="5.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="newCountryId" alignment="CENTER" disable="true" promptText="AUTO">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="3.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <Label text="Name:">
+                                            <HBox.margin>
+                                                <Insets left="30.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="newCountryName">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="7.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <Label text="Created:">
+                                            <HBox.margin>
+                                                <Insets left="20.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="newCountryCreated" alignment="CENTER" disable="true" promptText="AUTO">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="7.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                    <VBox.margin>
+                                        <Insets top="7.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Label text="Created By:">
+                                            <HBox.margin>
+                                                <Insets left="4.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="newCountryCreatedBy" alignment="CENTER" disable="true" promptText="AUTO">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                    <VBox.margin>
+                                        <Insets top="7.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Label text="Updated:">
+                                            <HBox.margin>
+                                                <Insets left="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="newCountryUpdated" alignment="CENTER" disable="true" promptText="AUTO">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                    <VBox.margin>
+                                        <Insets top="7.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Label text="Updated By:" />
+                                        <TextField fx:id="newCountryUpdatedBy" alignment="CENTER" disable="true" promptText="AUTO">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets top="7.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label fx:id="newValidation" />
+                           </children>
+                        </HBox>
+                                <HBox id="3" alignment="CENTER" prefHeight="40.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <ButtonBar buttonMinWidth="80.0" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0">
+                                            <buttons>
+                                                <Button fx:id="newCancel" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Cancel" />
+                                                <Button fx:id="newCreate" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Create" />
+                                            </buttons>
+                                            <HBox.margin>
+                                                <Insets left="70.0" right="7.0" />
+                                            </HBox.margin>
+                                            <padding>
+                                                <Insets bottom="3.0" right="20.0" top="3.0" />
+                                            </padding>
+                                        </ButtonBar>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="7.0" />
+                                    </VBox.margin>
+                                </HBox>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="312.0" left="20.0" right="20.0" top="20.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets top="7.0" />
+                            </padding>
+                        </VBox>
+                    </children>
+                    <GridPane.margin>
+                        <Insets bottom="3.0" left="1.0" right="1.0" />
+                    </GridPane.margin>
+                </VBox>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

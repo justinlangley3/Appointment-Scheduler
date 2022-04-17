@@ -1,0 +1,1292 @@
+/*
+ * Created By: 	Justin A. Langley
+ * Student ID: 	#001036634
+ * Course: 	C195 - Software II 
+ * Language: 	Java
+ *
+ * @(#)Style.css   2021.03.14 at 03:29:56 EDT
+ * Version: 1.0.0
+ */
+
+
+
+
+
+/**************************
+*   Special Identifiers   *
+***************************/
+#text-medium
+{
+    -fx-text-fill: #E0E0E0;
+    -fx-font-family: 'Roboto';
+    -fx-font-size: 1.2em;
+    -fx-font-weight: bold;
+    
+}
+#title
+{
+    -fx-text-fill: #E0E0E0;
+    -fx-font-family: 'Roboto-Medium';
+    -fx-font-size: 1.5em;
+    -fx-font-weight: bold;
+}
+#border
+{
+    -fx-border-color: black;
+    -fx-border-insets: 3 2 2 3;
+    -fx-border-radius: 5;
+}
+
+/********************************* 
+*          Context Menu          *
+*  Remove margins and add border *
+**********************************/
+.context-menu
+{
+    -fx-padding: 0em;
+    -fx-border-color: black;
+}
+
+/**************
+*   Buttons   *
+***************/
+.button,
+.check-box > .box,
+.split-menu-button > .label,
+.split-menu-button > .arrow-button,
+.slider .thumb,
+.scroll-bar > .thumb,
+.scroll-bar > .increment-button,
+.scroll-bar > .decrement-button,
+.choice-box,
+.color-picker.split-button > .arrow-button,
+.color-picker.split-button > .color-picker-label,
+.combo-box-base,
+.combo-box-base:editable > .arrow-button,
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button,
+.tab-pane > .tab-header-area > .control-buttons-tab > .container > .tab-down-button 
+{
+    -fx-border-color: black;
+    -fx-border-radius: 3;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-text-fill: #E0E0E0;
+    -fx-background-color: linear-gradient(#424242,#212121, black);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+/**************
+*   Buttons   *
+*   ~focus~   *
+***************/
+.button:focused,
+.check-box:focused > .box,
+.split-menu-button, .label:focused,
+.split-menu-button, .arrow-button:focused,
+.slider .thumb:focused,
+.scroll-bar > .thumb:focused,
+.scroll-bar > .increment-button:focused,
+.scroll-bar > .decrement-button:focused,
+.choice-box:focused,
+.color-picker.split-button > .arrow-button:focused,
+.color-picker.split-button > .color-picker-label:focused,
+.combo-box-base:focused,
+.combo-box-base:editable > .arrow-button:focused,
+.spinner .increment-arrow-button:focused,
+.spinner .decrement-arrow-button:focused,
+.tab-pane > .tab-header-area > .control-buttons-tab > .container > .tab-down-button:focused
+{
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(#616161, #454545, #333333);
+    -fx-border-color: #72BCD4;
+    -fx-border-radius: 3;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+
+/**************
+*   Buttons   *
+*   ~hover~   *
+***************/
+.button:hover,
+.check-box:hover > .box,
+.split-menu-button > .label:hover,
+.split-menu-button > .arrow-button:hover,
+.slider .thumb:hover,
+.scroll-bar > .thumb:hover,
+.scroll-bar > .increment-button:hover,
+.scroll-bar > .decrement-button:hover,
+.choice-box:hover,
+.color-picker.split-button > .arrow-button:hover,
+.color-picker.split-button > .color-picker-label:hover,
+.combo-box-base:hover,
+.combo-box-base:editable > .arrow-button:hover,
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover,
+.tab-pane > .tab-header-area > .control-buttons-tab > .container > .tab-down-button:hover
+{
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(#616161, #454545, #333333);
+    -fx-border-color: black;
+    -fx-border-radius: 3;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+/**************
+*   Buttons   *
+*   ~press~   *
+***************/
+.button:armed,
+.check-box:armed .box,
+.split-menu-button:armed > .label,
+.split-menu-button > .arrow-button:pressed,
+.split-menu-button:showing > .arrow-button,
+.slider .thumb:pressed,
+.scroll-bar > .thumb:pressed,
+.scroll-bar > .increment-button:pressed,
+.scroll-bar > .decrement-button:pressed,
+.choice-box:showing,
+.combo-box-base:showing,
+.combo-box-base:editable:showing > .arrow-button,
+.spinner .increment-arrow-button:pressed,
+.spinner .decrement-arrow-button:pressed,
+.tab-pane > .tab-header-area > .control-buttons-tab > .container > .tab-down-button:pressed
+{
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(#505050, #3D3D3D, #212121);
+    -fx-border-color: black;
+    -fx-border-radius: 3;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+/**************
+*    Radio    *
+*   ~press~   *
+***************/
+.radio-button > .radio
+{
+    -fx-border-width: 0.1em;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 3px;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-text-fill: #E0E0E0;
+    -fx-background-color: linear-gradient(white, #E0E0E0, #dbdbdb);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.radio-button .radio:selected {
+    -fx-border-width: 0.1em;
+    -fx-border-color: black;
+    -fx-border-radius: 3px;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-text-fill: #72BCD4;
+    -fx-background-color: linear-gradient(white, #E0E0E0, #dbdbdb);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.radio-button:focused > .radio
+{
+    -fx-border-width: 0.1em;
+    -fx-border-color: #72BCD4;
+    -fx-border-radius: 3px;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-text-fill: #72BCD4;
+    -fx-background-color: linear-gradient(white, #E0E0E0, #dbdbdb);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.radio-button:hover > .radio
+{
+    -fx-border-width: 0.1em;
+    -fx-border-color: #72BCD4;
+    -fx-border-radius: 3px;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-text-fill: #E0E0E0;
+    -fx-background-color: linear-gradient(white, #E0E0E0, #dbdbdb);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.radio-button:armed > .radio
+{
+    -fx-border-color: black;
+    -fx-border-radius: 3px;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-text-fill: #E0E0E0;
+    -fx-background-color: linear-gradient(white, #E0E0E0, #dbdbdb);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.radio-button -radio:determinate {
+    -fx-background-color: white;
+}
+.radio-button -radio:indeterminate {
+    -fx-background-color: white;
+}
+.radio-button .dot {
+    -fx-shape: "M1,1 h10 v10 h-10 v-10 Z";
+    -fx-border-radius: 8px;
+    -fx-padding: 8px;
+}
+
+
+
+/**************
+*Toggle Button*
+*   ~press~   *
+***************/
+.toggle-button,
+.toggle-button:focused,
+.toggle-button:hover,
+.toggle-button:armed
+{
+    
+}
+
+/***************
+*   Spinners   *
+****************/
+.spinner
+{
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 1em;
+    -fx-background-color: transparent;
+    -fx-background-radius: 7px 7px 7px 7px;
+}
+.spinner:focused,
+.spinner:contains-focus
+{
+    -fx-background-color: derive(#757575, -9%), transparent;
+}
+.spinner > .text-field
+{
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 1em;
+    -fx-mark-color: white;
+    -fx-background-color: #757575;
+    -fx-background-radius: 7px 7px 7px 7px;
+}
+.spinner:focused > .text-field,
+.spinner:contains-focus > .text-field
+{
+    -fx-background-color:
+        #757575,
+        #617F9B,
+        linear-gradient(from 0px 0px to 0px 5px, derive(#757575, -9%), #757575);
+    -fx-background-radius: 7px, 7px, 7px, 7px;
+    -fx-background-insets: 0em, -0.10em, 0em, -0.10em;
+}
+
+.spinner .increment-arrow-button
+{
+    -fx-border-color: black;
+    -fx-border-radius: 3;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-text-fill: #E0E0E0;
+    -fx-background-color: linear-gradient(#424242,#212121, black);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.spinner .decrement-arrow-button
+{
+    -fx-border-color: black;
+    -fx-border-radius: 3;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-text-fill: #E0E0E0;
+    -fx-background-color: linear-gradient(#424242,#212121, black);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.spinner .increment-arrow-button .increment-arrow
+{
+    -fx-background-color: #E0E0E0;
+    -fx-background-insets: 0 0 -1 0, 0;
+    -fx-padding: 0.166667em 0.333333em 0.166667em 0.333333em;  /* 2 4 2 4 */
+    -fx-shape: "M 0 4 h 7 l -3.5 -4 z";
+}
+.spinner .decrement-arrow-button .decrement-arrow
+{
+    -fx-background-color: #E0E0E0;
+    -fx-background-insets: 0 0 -1 0, 0;
+    -fx-padding: 0.166667em 0.333333em 0.166667em 0.333333em; /* 2 4 2 4 */
+    -fx-shape: "M 0 0 h 7 l -3.5 4 z";
+}
+
+/*******************
+*   Choice Boxes   *
+********************/
+.choice-box,
+.menu-button,
+.combo-box-base
+{
+    -fx-border-color: transparent;
+    -fx-mark-color: white;
+    -fx-background-color: #757575;
+    -fx-background-radius: 7px 7px 7px 7px;
+    -fx-padding: 0;
+}
+.choice-box > .label,
+.menu-button > .label,
+.color-picker > .label
+{
+    -fx-border-color: transparent;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 1em;
+    -fx-padding: 4 6 4 6;
+    -fx-text-fill: black;
+}
+.choice-box > .open-button,
+.menu-button > .arrow-button
+{
+    -fx-border-color: transparent;
+    -fx-padding: 0.5em 0.667em 0.5em 0.0em; /* 6 8 6 0 */
+}
+.choice-box > .open-button > .arrow
+{
+    -fx-border-color: transparent;
+    -fx-background-color: black, #DFDFDF;
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-padding: 0.225em 0.36em 0.225em 0.36em;
+    -fx-shape: "M 0 0 h 21 l -10 15 z";
+}
+.choice-box .context-menu
+{
+    -fx-border-color: transparent;
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-color: #212121;
+    -fx-background-radius: 6, 5, 4;
+    -fx-border-radius: 6, 5, 4;
+}
+
+
+/*******************
+*   Choice Boxes   *
+*     ~focus~      *
+********************/
+.choice-box:focused,
+.menu-button:focused
+{
+    -fx-border-color: transparent;
+}
+.choice-box > .label:focused,
+.menu-button > .label:focused,
+.color-picker > .label:focused
+{
+    -fx-border-color: transparent;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 1em;
+    -fx-padding: 4 6 4 6;
+    -fx-text-fill: black;
+}
+.choice-box > .open-button:focused,
+.menu-button > .arrow-button:focused
+{
+    -fx-border-color: #72BCD4;
+    -fx-padding: 0.5em 0.667em 0.5em 0.0em; /* 6 8 6 0 */
+}
+.choice-box > .open-button > .arrow:focused
+{
+    -fx-background-color: black, #72BCD4;
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-padding: 0.225em 0.36em 0.225em 0.36em;
+    -fx-shape: "M 0 0 h 21 l -10 15 z";
+}
+.choice-box .context-menu:focused
+{
+    -fx-border-color: black;
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-color: #212121;
+    -fx-background-radius: 6, 5, 4;
+}
+
+.choice-box:focused .container
+{
+    -fx-border-color: transparent;
+}
+
+ /***************
+ * Combo Boxes *
+ ***************/
+
+.combo-box-base > .label:focused,
+.combo-box > .label:focused {
+    -fx-border-color: transparent;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 1em;
+    -fx-padding: 4 6 4 6;
+    -fx-text-fill: black;
+    
+}
+
+ .combo-box-base:focused {
+    -fx-border-color: transparent;
+     
+ }
+.combo-box .list-cell {
+    -fx-text-fill: #E0E0E0; 
+}
+.combo-box .list-view .list-cell {
+    -fx-text-fill: black;
+}
+
+.combo-box .list-view .list-cell:selected {
+    -fx-text-fill: #E0E0E0;
+}
+
+
+
+/************
+*   Menus   *
+*************/
+.menu
+{
+    -fx-background-color: transparent;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.333333em; /* 4 8 4 8 */
+}
+.menu > .right-container > .arrow
+{
+    -fx-padding: 0.458em 0.167em 0.458em 0.167em; /* 4.5 2 4.5 2 */
+    -fx-background-color: #E0E0E0;
+    -fx-shape: "M0,-4L4,0L0,4Z";
+    -fx-scale-shape: false;
+}
+.menu:focused > .right-container > .arrow
+{
+    -fx-background-color: -fx-focused-mark-color;
+}
+.menu-up-arrow
+{
+    -fx-padding: 0.666667em 0.416667em 0.0em 0.416667em;  /* 8 5 0 5 */
+    -fx-background-color: derive(#212121,-2%), #E0E0E0;
+    -fx-shape: "M0 1 L1 1 L.5 0 Z";
+}
+.menu-down-arrow
+{
+    -fx-background-color: derive(#212121,-2%), #E0E0E0;
+    -fx-padding: 0.666667em 0.416667em 0.0em 0.416667em;  /* 8 5 0 5 */
+    -fx-shape: "M0 0 L1 0 L.5 1 Z";
+}
+
+/**************
+*   MenuBar   *
+***************/
+.menu-bar
+{
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0.0em 0.666667em 0.0em 0.666667em; /* 0 8 0 8 */
+    -fx-spacing: 0.166667em; /* 2 */
+    -fx-background-color: #212121;
+    -fx-background-insets: 0 0 -2 0;
+    -fx-border-width: 2.0;
+}
+.menu-bar > .container
+{
+    -fx-background-color: transparent;
+}
+/* Show nothing for background of normal menu button in a menu bar */
+.menu-bar > .container > .menu-button
+{
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+/* Change padding of menu buttons when in menu bar */
+.menu-bar > .container > .menu-button > .label
+{
+    -fx-padding: 3 0 0 0;
+}
+/* Hide the down arrow for a menu placed in a menubar */
+.menu-bar > .container > .menu-button > .arrow-button > .arrow
+{
+    -fx-padding: 0.167em 0 0.250em 0; /* 2 0 3 0 */
+    -fx-background-color: transparent;
+    -fx-shape: null;
+}
+.menu-bar > .container > .menu > .arrow-button
+{
+    -fx-padding: 0.500em 0 0.500em 0; /* 6 0 6 0 */
+}
+.menu-bar > .container > .menu-button:hover,
+.menu-bar > .container > .menu-button:focused,
+.menu-bar > .container > .menu-button:showing
+{
+    -fx-background: -fx-selection-bar;
+    -fx-background-color: -fx-focus-color;
+}
+.menu-bar > .container > .menu-button:hover > .label,
+.menu-bar > .container > .menu-button:focused > .label,
+.menu-bar > .container > .menu-button:showing  > .label
+{
+    -fx-text-fill: derive(#212121, 2%);
+}
+.menu-bar .label
+{
+    -fx-font-size: 11.0 pt;
+    -fx-font-family: "Roboto-Medium";
+    -fx-text-fill: white;
+    -fx-padding: 0;
+
+}
+.menu-bar .menu-button:hover
+{
+    -fx-text-fill: white;
+    -fx-background-color: -fx-focus-color, linear-gradient(#616161, #454545, #333333);
+
+}
+.menu-bar .menu-button:focused
+{
+    -fx-text-fill: white;
+    -fx-background-color: -fx-focus-color, linear-gradient(#616161, #454545, #333333);
+    
+}
+
+/****************
+ *   MenuItem   *
+ ****************/
+.menu-item
+{
+    -fx-text-fill: #E0E0E0;
+    -fx-background-color: #212121;
+    -fx-padding: 4 5 4 5;
+}
+.menu-item > .left-container
+{
+    -fx-padding: 0.458em 0.791em 0.458em 0.458em;
+}
+.menu-item > .graphic-container
+{
+    -fx-padding: 0em 0.333em 0em 0em;
+}
+.menu-item >.label
+{
+    -fx-padding: 0.1em 0.5em 0.1em 0em;
+    -fx-font-size: 11.0 pt;
+    -fx-text-fill: #E0E0E0;
+}
+.menu-item:focused
+{
+     -fx-background: -fx-selection-bar;
+     -fx-background-color: -fx-background;
+     -fx-text-fill:  -fx-text-background-color;
+}
+.menu-item:focused > .label
+{
+    -fx-text-fill: -fx-focused-text-base-color;
+}
+.menu-item > .right-container
+{
+    -fx-padding: 0em 0em 0em 0.5em;
+}
+.radio-menu-item:checked > .left-container > .radio
+{
+    -fx-background-color: -fx-mark-color;
+    -fx-shape: "M0,5H2L4,8L8,0H10L5,10H3Z";
+    -fx-scale-shape: false;
+}
+.radio-menu-item:focused:checked > .left-container > .radio
+{
+    -fx-background-color: -fx-focused-mark-color;
+}
+.check-menu-item:checked > .left-container > .check
+{
+    -fx-background-color: -fx-mark-color;
+    -fx-shape: "M0,5H2L4,8L8,0H10L5,10H3Z";
+    -fx-scale-shape: false;
+}
+.check-menu-item:focused:checked > .left-container > .check
+{
+    -fx-background-color: -fx-focused-mark-color;
+}
+
+/****************
+*   List View   *
+*****************/
+.list-view
+{
+    -fx-background-color: transparent;
+    -fx-background-radius: 7px, 7px, 0px, 0px;
+    -fx-border-color: black;
+}
+.list-view .list-cell:selected
+{
+    -fx-border-color: black;
+    -fx-background-color: #636975;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.1em;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 1em;
+}
+.list-view .list-cell:odd
+{
+    -fx-background-color: derive(#C1C4CA, -17%);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.1em;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 1em;
+}
+.list-view .list-cell:even
+{
+    -fx-background-color: derive(#979DA7, -9%);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.1em;    
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 1em;
+}
+.list-cell {
+    -fx-alignment: center;
+}
+
+/****************
+*   List View   *
+*    ~focus~    *
+*****************/
+.list-view .list-cell:focused
+{
+    -fx-border-color: #72BCD4;
+    -fx-background-color: derive(#B1B4BA, -20%);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.1em;    
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 1em;
+}
+
+/*****************
+*   Scrollbars   *
+******************/
+.scroll-bar:horizontal,
+.scroll-bar:vertical
+{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: .1em;
+}
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical, .track
+{
+    -fx-background-color: #757575;
+}
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical, .thumb
+{
+    -fx-background-color: #212121;
+}
+.scroll-bar:horizontal .increment-button,
+.scroll-bar:vertical .increment-button,
+.scroll-bar:horizontal .decrement-button,
+.scroll-bar:vertical .decrement-button
+{
+    -fx-padding: 0.233em;
+}
+
+/* pressed */
+.slider .thumb:pressed,
+.scroll-bar > .thumb:pressed
+{
+    -fx-background-color: #1F1F1F;
+}
+
+/* hover */
+.slider .thumb:hover,
+.scroll-bar > .thumb:hover
+{
+    -fx-background-color: #3D3D3D;
+    
+}
+
+/* normal */
+.slider .thumb,
+.scroll-bar > .thumb
+{
+    -fx-background-color: #212121;
+}
+
+/*****************
+*   Table View   *
+******************/
+.table-view
+{
+    -fx-background-color: #212121;
+}
+.table-view .virtual-flow .corner
+{
+    -fx-background-color: transparent;
+}
+
+/* To remove a scrollbar from a table-view
+    Requires:
+        Giving the table-view a parent container
+        Adding the .noscroll class to the parent container
+    The scrollbar will then be modified as a child
+*/
+.noscroll > .table-view .virtual-flow .scroll-bar *
+{
+    -fx-min-width: 0;
+    -fx-pref-width: 0;
+    -fx-max-width: 0;
+
+    -fx-min-height: 0;
+    -fx-pref-height: 0;
+    -fx-max-height: 0;
+}
+.noscroll > .table-view:focused
+{
+    -fx-border-color: #72BCD4;
+    -fx-border-width: 1px;
+    -fx-border-radius: 7px 7px 0px 0px;
+    -fx-border-insets: 0px -1px 0px 0px;
+}
+
+.noselect > .table-view .row-selection .virtual-flow .clipped-container .sheet .table-row-cell:filled:selected {
+    
+  -fx-background: -fx-control-inner-background ;
+  -fx-background-color: -fx-table-cell-border-color, -fx-background ;
+  -fx-background-insets: 0, 0 0 1 0 ;
+  -fx-table-cell-border-color: derive(-fx-color, 5%);
+}
+.noselect > .table-view .row-selection .virtual-flow .clipped-container .sheet .table-row-cell:filled:odd:selected {
+  -fx-border-color: derive(#CFD8DC, -20%);
+  -fx-background: -fx-control-inner-background-alt ;
+  -fx-background-insets: 0, 0 0 1 0 ;
+  -fx-table-cell-border-color: derive(-fx-color, 5%);
+}
+
+.noselect > .table-view .table-cell:selected {
+    -fx-background-color: black;
+    -fx-text-background-color: black;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 0.9em;
+    
+}
+
+.table-view .column-header
+{
+    -fx-background-color: linear-gradient(#414c52 0%, #27292B 98%, black 100%);
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-border-color: black;
+    -fx-border-radius: 7px 7px 0px 0px;
+    -fx-text-background-color: #E0E0E0;
+    -fx-text-fill: #E0E0E0;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 1.1em;
+}
+.table-view .column-header-background
+{
+    -fx-background-color: transparent;
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-border-radius: 7px 7px 0px 0px;
+    -fx-padding: 0 0 0 0;
+}
+.table-view .table-cell
+{
+    -fx-border-color: black;
+    -fx-padding: 2 0 2 10px;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 0.9em;
+}
+.table-view .table-cell:hover
+{
+    -fx-background-color: derive(#979DA7, 40%);
+    -fx-text-background-color: black;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 0.9em;
+}
+.table-view .table-cell:pressed
+{
+    -fx-background-color: derive(#979DA7, -40%);
+    -fx-text-background-color: black;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 0.9em;
+}
+.table-view .table-cell:selected
+{
+    -fx-background-color: #000000;
+    -fx-text-background-color: black;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 0.9em;
+}
+.table-view .table-cell:focused {
+    
+    -fx-border-color: white;
+    -fx-text-background-color: black;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 0.9em;
+}
+.table-row-cell:odd
+{
+    -fx-background-color: derive(#C1C4CA, -17%);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 0.9em;
+}
+.table-row-cell:even
+{
+    -fx-background-color: derive(#979DA7, -13%);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 0.9em;
+}
+
+.table-view:focused
+{
+    -fx-border-color: #72BCD4;
+    -fx-border-width: 1px;
+    -fx-border-radius: 7px 7px 0px 0px;
+}
+
+.table-row-cell:filled:selected { 
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-background-color: derive(#979DA7, -13%);
+    -fx-text-background-color: white;
+    -fx-padding: 0.0em;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 0.9em;
+}
+.table-row-cell:odd:filled:selected {
+    -fx-background-color: derive(#C1C4CA, -17%);
+    -fx-text-background-color: white;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 0.9em;
+}
+
+/***************
+*   Tab Pane   *
+****************/
+.tab-pane .tab-header-area
+{
+    -fx-background-color: transparent;
+    -fx-padding: 5px 5px 1px 5px;
+}
+.tab-pane .tab-header-area .tab-header-background
+{
+    -fx-border-color: black;
+    -fx-border-radius: 5 5 3 3;
+    -fx-background-insets: 4 4 0 5;
+    -fx-border-insets: 4 4 -1 5;
+    -fx-background-color: #3C3C3C;
+}
+.tab-pane
+{
+    -fx-background-color: #212121;
+    -fx-tab-min-width:90px;
+}
+.tab
+{
+    -fx-border-color: derive(#E0E0E0, -33%);
+    -fx-border-insets: 0 1 0 1,0,0;
+    -fx-border-radius: 5 5 0 0;
+    -fx-background-radius: 5 5 0 0;
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+.tab-pane .tab
+{
+    -fx-padding: 0 6 0 6;
+    -fx-background-color: derive(#212121, -2%);
+}
+.tab-pane .tab:selected
+{
+    -fx-border-radius: 5 5 0 0;
+    -fx-background-radius: 5 5 0 0;
+    -fx-background-color: derive(-fx-control-inner-background, -60%);
+}
+.tab-pane .tab:hover
+{
+    -fx-border-radius: 5 5 0 0;
+    -fx-background-radius: 5 5 0 0;
+    -fx-background-color: derive(-fx-control-inner-background, -60%);
+}
+.tab .tab-label
+{ 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #E0E0E0;
+    -fx-font-family: 'Roboto-Medium';
+    -fx-font-size: 1.2em;
+    -fx-font-weight: bold;
+}
+.tab:selected .tab-label
+{ 
+    -fx-alignment: CENTER;
+    -fx-text-fill: derive(#212121, -6%);
+    -fx-font-family: 'Roboto-Medium';
+    -fx-font-size: 1.2em;
+    -fx-font-weight: bold;
+}
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator
+
+{
+    -fx-border-color: #72BCD4;
+    -fx-border-radius: 5 5 0 0;
+    -fx-border-insets: -4 -6 -4 -6;
+}
+
+/******************
+*   Text Things   *
+*******************/
+.label
+{
+    -fx-text-fill: #E0E0E0;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 1em;
+}
+.text-field {
+    -fx-text-fill: black;
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 1em;
+    -fx-background-color: #757575;
+    -fx-background-radius: 7px 7px 7px 7px;
+}
+.text-area
+{
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 1em;
+    -fx-text-fill: black;
+    -fx-background-color: #757575;
+    -fx-background-radius: 7px 7px 7px 7px;
+    -fx-display-caret: true;
+}
+.text-area .content
+{
+    -fx-background-color: #757575;
+    -fx-background-radius: 7px 7px 7px 7px;
+}
+.text-area .content .filler
+{
+    -fx-background-color: #757575;
+    -fx-text-fill: black;
+    -fx-background-radius: 7px 7px 7px 7px;
+}
+
+.text-field:focused,
+.text-area:focused
+{
+    -fx-border-radius: 7px;
+    -fx-border-color: #72BCD4;
+}
+
+/*****************
+*   Containers   *
+******************/
+.hbox
+{
+    -fx-background-color: #212121;
+}
+.vbox
+{
+    -fx-background-color: #212121;
+}
+.viewport
+{
+    -fx-background-color: transparent;
+}
+
+/*****************                               
+*   DatePicker   *
+******************/
+.date-picker
+{
+    -fx-background-color: transparent;
+    -fx-background-radius: 7px 7px 7px 7px;
+}
+.date-picker:hover
+{
+    -fx-background-color: transparent;
+    -fx-background-radius: 7px 7px 7px 7px;
+}.date-picker:focused
+{
+    -fx-background-color:
+        #757575,
+        #617F9B,
+        linear-gradient(from 0px 0px to 0px 5px, derive(#757575, -9%), #757575);
+    -fx-background-radius: 7px, 7px, 7px, 7px;
+    -fx-background-insets: 0em, -0.11em, 0em, -0.11em;
+}
+.date-picker > .arrow-button > .arrow
+{
+    -fx-shape: "M0,0v9h9V0H0z M2,8H1V7h1V8z M2,6H1V5h1V6z M2,4H1V3h1V4z M4,8H3V7h1V8z M4,6H3V5h1V6z M4,4H3V3h1V4z M6,8H5V7h1V8z M6,6H5 V5h1V6z M6,4H5V3h1V4z M8,8H7V7h1V8z M8,6H7V5h1V6z M8,4H7V3h1V4z";
+    -fx-background-color: #1F1F1F, #E0E0E0;
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-padding: 0.416667em 0.416667em 0.333333em 0.333333em; /* 5 5 4 4 */
+    -fx-scale-shape: true;
+}
+
+/********************
+*    Date Picker    *
+*      ~Popup~      *
+*********************/
+.date-picker-popup
+{
+     -fx-background-color:
+        linear-gradient(to bottom,
+            derive(#3C3C3C,-17%),
+            derive(#212121,-30%)
+        ),
+        #212121;
+    -fx-background-insets: 0, 1;
+    -fx-alignment: CENTER; /* VBox */
+    -fx-spacing: 0; /* VBox */
+    -fx-padding: 0.083333em; /* 1 1 1 1 */
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 12, 0.0 , 0 , 8 );
+}
+.date-picker-popup > .month-year-pane
+{
+    -fx-padding: 0.588883em 0.5em 0.666667em 0.5em; /* 7 6 8 6 */
+    -fx-background-color: transparent, linear-gradient(to bottom, derive(#212121,-3%), derive(#1F1F1F,5%) 50%, derive(#212121,-3%));
+    -fx-border-color: black;
+    -fx-border-radius: 0, 7, 0, 7;
+    -fx-background-radius: 0, 7, 0, 7;
+    -fx-border-insets: 1 1 0 1;
+}
+.date-picker-popup > * > .spinner
+{
+    -fx-font-family: 'Roboto-Regular';
+    -fx-font-size: 1em;
+    -fx-background-color: derive(#212121, -10%);
+    -fx-background-radius: 7px 7px 7px 7px;
+    -fx-spacing: 0.25em; /* 3 */
+    -fx-alignment: CENTER;
+    -fx-fill-height: false;
+}
+.date-picker-popup > * > .spinner > .button
+{
+    -fx-text-fill: #E0E0E0;
+    -fx-background-color: linear-gradient(#424242,#212121, black);
+    -fx-border-radius: 3;
+    -fx-background-radius: 2;
+    -fx-background-insets: -0.2, 1, 2, -1.4, 2.6;
+    -fx-border-color: #212121;
+}
+.date-picker-popup > * > .spinner > .button:focused
+{
+    -fx-background-color: -fx-focus-color, -fx-faint-focus-color, linear-gradient(#505050, #3D3D3D, #212121);
+}
+.date-picker-popup > * > .spinner > .button:hover
+{
+    -fx-background-color:  -fx-focus-color, linear-gradient(#616161, #454545, #333333);
+    -fx-border-radius: 3;
+    -fx-background-radius: 2;
+    -fx-background-insets: -0.2, 1, 2, -1.4, 2.6;
+    -fx-border-color: #212121;
+}
+.date-picker-popup > * > .spinner > .button:armed
+{
+    -fx-background-color: linear-gradient(#505050, #3D3D3D, #212121), -fx-focus-color;
+    -fx-border-radius: 3;
+    -fx-background-radius: 2;
+    -fx-background-insets: -0.2, 1, 2, -1.4, 2.6;
+    -fx-border-color: #212121;
+}
+.date-picker-popup > * > .spinner > .left-button
+{
+    -fx-background-color: linear-gradient(#424242,#212121, black);
+    -fx-padding: 0 0.333333em 0 0.25em; /* 0 4 0 3 */
+}
+.date-picker-popup > * > .spinner > .right-button
+{
+    -fx-background-color: linear-gradient(#424242,#212121, black);
+    -fx-padding: 0 0.25em 0 0.333333em; /* 0 3 0 4 */
+}
+.date-picker-popup > * > .spinner > .button > .left-arrow,
+.date-picker-popup > * > .spinner > .button > .right-arrow
+{
+    -fx-background-color: #E0E0E0;
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-padding: 0.333333em 0.166667em 0.333333em 0.166667em; /* 4 2 4 2 */
+}
+.date-picker-popup > * > .spinner > .button:hover > .left-arrow,
+.date-picker-popup > * > .spinner > .button:hover > .right-arrow
+{
+    -fx-background-color:  white;
+}
+.date-picker-popup > * > .spinner > .button:pressed > .left-arrow,
+.date-picker-popup > * > .spinner > .button:pressed > .right-arrow
+{
+    -fx-text-fill: #E0E0E0;
+    -fx-background-color: #E0E0E0;
+}
+.date-picker-popup > * > .spinner > .button > .left-arrow
+{
+    -fx-padding: 0.333333em 0.25em 0.333333em 0.166667em; /* 4 3 4 2 */
+    -fx-shape: "M5.997,5.072L5.995,6.501l-2.998-4l2.998-4l0.002,1.43l-1.976,2.57L5.997,5.072z";
+    -fx-scale-shape: true;
+}
+.date-picker-popup > * > .spinner > .button > .right-arrow
+{
+    -fx-padding: 0.333333em 0.25em 0.333333em 0.166667em; /* 4 3 4 2 */
+    -fx-shape: "M2.998-0.07L3-1.499l2.998,4L3,6.501l-0.002-1.43l1.976-2.57L2.998-0.07z";
+    -fx-scale-shape: true;
+}
+.date-picker-popup > * > .spinner > .label
+{
+    -fx-text-fill: #E0E0E0;
+    -fx-background-color: transparent;
+    -fx-alignment: CENTER;
+}
+.date-picker-popup > .month-year-pane > .secondary-label
+{
+    -fx-alignment: BASELINE_CENTER;
+    -fx-padding: 0.5em 0 0 0; /* 6 0 0 0 */
+    -fx-text-fill: #f3622d;
+}
+
+/********************
+*    Date Picker    *
+*      ~Cells~      *
+*********************/
+.date-picker-popup > .calendar-grid
+{
+    -fx-background-color: derive(-fx-selection-bar-non-focused, -85%);
+    /*-fx-background-insets: 1 0 0 0;*/
+    -fx-padding: 0;
+}
+.date-picker-popup > * > .date-cell
+{
+    -fx-background-color: transparent;
+    -fx-background-insets: 1, 2;
+    -fx-padding: 0;
+    -fx-alignment: BASELINE_CENTER;
+    -fx-opacity: 1.0;
+}
+.date-picker-popup > * > .day-name-cell,
+.date-picker-popup > * > .week-number-cell
+{
+    -fx-text-fill: #E0E0E0;
+    -fx-font-size: 0.916667em;
+}
+.date-picker-popup > * > .week-number-cell
+{
+    -fx-padding: 0.333333em 0.583333em 0.333333em 0.583333em; /* 4 7 4 7 */
+    -fx-border-color: transparent;
+    -fx-border-width: 1px;
+    -fx-background: -fx-control-inner-background;
+    -fx-background-color: derive(-fx-selection-bar-non-focused, -85%);
+    -fx-text-fill: -fx-accent;
+}
+.date-picker-popup > * > .day-cell
+{
+    -fx-padding: 0.333333em 0.583333em 0.333333em 0.583333em; /* 4 7 4 7 */
+    -fx-border-color: derive(-fx-selection-bar-non-focused, -50%);
+    -fx-border-width: 1px;
+    -fx-font-size: 1em;
+    -fx-background: derive(#3f3f3f, -4%);
+    -fx-background-color: -fx-background;
+    -fx-text-fill: -fx-text-background-color;
+}
+.date-picker-popup > * > .hijrah-day-cell
+{
+    -fx-alignment: TOP_LEFT;
+    -fx-padding: 0.083333em 0.333333em 0.083333em 0.333333em; /* 1 4 1 4 */
+    -fx-cell-size: 2.75em;
+}
+.date-picker-popup > * > .day-cell > .secondary-text
+{
+    -fx-fill: #f3622d;
+}
+.date-picker-popup > * > .today
+{
+    -fx-text-fill: white;
+    -fx-background-color: -fx-focus-color, #212121, black;
+    -fx-background-insets: 1, 2, 3;
+}
+.date-picker-popup > * > .today:selected
+{
+    -fx-text-fill: white;
+    -fx-background-color: black, -fx-focus-color, -fx-selection-bar;
+    -fx-background-insets: 1, 2, 3;
+}
+.date-picker-popup > * > .day-cell:hover,
+.date-picker-popup > * > .selected,
+.date-picker-popup > * > .previous-month.selected,
+.date-picker-popup > * > .next-month.selected
+{
+    -fx-background: -fx-selection-bar;
+}
+.date-picker-popup > * > .previous-month:hover,
+.date-picker-popup > * > .next-month:hover
+{
+    -fx-background: -fx-selection-bar-non-focused;
+}
+.date-picker-popup > * > .today:hover,
+.date-picker-popup > * > .today.selected
+{
+    -fx-background-color: -fx-focus-color, black, -fx-selection-bar;
+}
+.date-picker-popup > * > .day-cell:focused,
+.date-picker-popup > * > .today:focused
+{
+    -fx-background-color: -fx-focus-color, #212121, black;
+    -fx-background-insets: 1, 2, 3;
+}
+.date-picker-popup > * > .day-cell:focused:hover,
+.date-picker-popup > * > .today:focused:hover,
+.date-picker-popup > * > .selected:focused,
+.date-picker-popup > * > .today.selected:focused
+{
+    -fx-text-fill: #E0E0E0;
+    -fx-background-color: -fx-focus-color, black, -fx-selection-bar;
+}
+.date-picker-popup > * > .previous-month,
+.date-picker-popup > * > .next-month
+{
+    -fx-background: derive(#212121, -4%);
+}
+.date-picker-popup > * > .day-cell:hover > .secondary-text,
+.date-picker-popup > * > .previous-month > .secondary-text,
+.date-picker-popup > * > .next-month > .secondary-text,
+.date-picker-popup > * > .selected > .secondary-text
+{
+    -fx-fill: -fx-text-background-color;
+}
+.date-picker-popup > * > .previous-month.today,
+.date-picker-popup > * > .next-month.today
+{
+    -fx-text-fill: white;
+    -fx-background-color: -fx-focus-color, black, #212121;
+}
+.date-picker-popup > * > .previous-month.today:hover,
+.date-picker-popup > * > .next-month.today:hover
+{
+    -fx-background-color: -fx-focus-color, black, #212121;
+}
+
+/***************
+*    Dialog    *
+****************/
+.dialog{
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-background-color: #212121;
+}
+.dialog > *.button-bar > *.container{
+    -fx-background-color: transparent;
+}
+.dialog > *.label.content{
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+    -fx-font-weight: regular;
+}
+.dialog:header *.header-panel{
+    -fx-background-color: transparent;
+}
+.dialog:header *.header-panel *.label{
+    -fx-font-family: roboto-regular;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.25em;
+}
+
+
+
+/*
+ * @(#)Style.css 2021.03.14 at 03:29:56 EDT
+ * EOF
+ */

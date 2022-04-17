@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="border" prefHeight="560.0" prefWidth="640.0" styleClass="hbox" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddressController">
+   <children>
+      <VBox prefHeight="560.0" prefWidth="640.0" styleClass="vbox" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox id="border" alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label id="title" fx:id="title" text="View/Edit Address" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <Label text="Address ID:" />
+                  <TextField fx:id="addressId" disable="true" prefWidth="90.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="7.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets right="312.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="7.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Address 1:" />
+                  <TextField fx:id="address1" prefWidth="210.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets right="188.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="7.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Address 2:" />
+                  <TextField fx:id="address2" prefWidth="210.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets right="188.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <Label text="City:" />
+                  <ComboBox fx:id="cityComboBox" prefWidth="210.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Label text="City ID:">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="cityId" disable="true" prefWidth="90.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="7.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets right="250.0" top="7.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Postal Code:" />
+                  <TextField fx:id="postalCode" prefWidth="160.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <Label text="Phone:" />
+                  <TextField fx:id="phone" prefWidth="160.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets right="220.0" top="7.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets right="45.0" top="7.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Created:" />
+                  <TextField fx:id="created" disable="true">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="By:">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="createdBy" disable="true">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets right="49.0" top="7.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Updated:">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="updated" disable="true">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="By:">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="updatedBy" disable="true">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="7.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="validation" />
+               </children>
+            </HBox>
+            <VBox id="border" alignment="CENTER">
+               <VBox.margin>
+                  <Insets top="17.0" />
+               </VBox.margin>
+               <children>
+                  <ButtonBar maxWidth="120.0" prefWidth="120.0">
+                    <buttons>
+                      <Button fx:id="saveButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Save" />
+                        <Button fx:id="cancelButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Cancel" />
+                    </buttons>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </ButtonBar>
+               </children>
+               <padding>
+                  <Insets bottom="7.0" top="7.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+         </padding>
+      </VBox>
+   </children>
+   <padding>
+      <Insets top="7.0" />
+   </padding>
+</AnchorPane>

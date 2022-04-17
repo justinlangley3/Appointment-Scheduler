@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="720.0" prefWidth="1180.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Tabs.WeeklyTab">
+    <children>
+        <GridPane alignment="CENTER" prefHeight="680.0" prefWidth="1000.0" AnchorPane.bottomAnchor="-20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="57.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="27.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" percentHeight="9.0" prefHeight="30.0" valignment="TOP" vgrow="NEVER" />
+                <RowConstraints minHeight="10.0" percentHeight="91.0" prefHeight="720.0" valignment="CENTER" />
+            </rowConstraints>
+            <children>
+                <VBox id="border" alignment="CENTER" maxHeight="570.0" maxWidth="300.0" prefHeight="570.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+                    <children>
+                  <Label text="Appointments">
+                     <VBox.margin>
+                        <Insets bottom="7.0" />
+                     </VBox.margin>
+                  </Label>
+                        <HBox VBox.vgrow="NEVER">
+                            <VBox.margin>
+                                <Insets left="4.0" />
+                            </VBox.margin>
+                            <children>
+                                <ListView fx:id="appointmentListView" maxWidth="300.0" prefHeight="503.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                    <HBox.margin>
+                                        <Insets right="3.0" />
+                                    </HBox.margin>
+                                </ListView>
+                            </children>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="7.0" top="47.0" />
+                    </padding>
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </VBox>
+                <VBox id="border" alignment="TOP_CENTER" maxHeight="570.0" maxWidth="720.0" prefHeight="720.0" prefWidth="600.0" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+                    <children>
+                        <HBox alignment="CENTER" fillHeight="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                            <children>
+                        <Button fx:id="prevYear" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="&lt;&lt;">
+                           <HBox.margin>
+                              <Insets right="7.0" />
+                           </HBox.margin>
+                        </Button>
+                                <Button fx:id="prevWeek" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="&lt;" textAlignment="CENTER" />
+                                <Label fx:id="position" alignment="CENTER" prefWidth="252.0" text="Week 1, January 2021" textFill="#e0e0e0">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="114.0" right="114.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <Button fx:id="nextWeek" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="&gt;" textAlignment="CENTER" />
+                        <Button fx:id="nextYear" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="&gt;&gt;">
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                        </Button>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="4.0" left="10.0" right="10.0" top="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="weekTableView" accessibleRole="IMAGE_VIEW" cache="true" cacheHint="SPEED" fixedCellSize="120.0" maxHeight="507.0" maxWidth="632.0" minHeight="90.0" minWidth="562.0" prefHeight="120.0" prefWidth="632.0" VBox.vgrow="NEVER">
+                            <columns>
+                                <TableColumn fx:id="sun" maxWidth="90.0" minWidth="-Infinity" prefWidth="90.0" text="Sun" />
+                                <TableColumn fx:id="mon" maxWidth="90.0" minWidth="-Infinity" prefWidth="90.0" text="Mon" />
+                                <TableColumn fx:id="tue" maxWidth="90.0" minWidth="-Infinity" prefWidth="90.0" text="Tue" />
+                                <TableColumn fx:id="wed" maxWidth="90.0" minWidth="-Infinity" prefWidth="90.0" text="Wed" />
+                                <TableColumn fx:id="thu" maxWidth="90.0" minWidth="-Infinity" prefWidth="90.0" text="Thu" />
+                                <TableColumn fx:id="fri" maxWidth="90.0" minWidth="-Infinity" prefWidth="90.0" text="Fri" />
+                                <TableColumn fx:id="sat" maxWidth="90.0" minWidth="-Infinity" prefWidth="90.0" text="Sat" />
+                            </columns>
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" />
+                            </VBox.margin>
+                        </TableView>
+                        <VBox prefHeight="386.0" prefWidth="713.0">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </VBox.margin>
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="title" text="Details" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                                    <VBox.margin>
+                                        <Insets top="7.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Label text="ID:" />
+                                        <TextField fx:id="appointmentId" editable="false" maxWidth="90.0" prefWidth="90.0">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                        <Label text="Customer ID:">
+                                            <HBox.margin>
+                                                <Insets left="20.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="customerId" editable="false" maxWidth="90.0" prefWidth="90.0">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                        <Label text="User ID:">
+                                            <HBox.margin>
+                                                <Insets left="20.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="userId" editable="false" maxWidth="90.0" prefWidth="90.0">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="310.0" prefWidth="200.0">
+                                    <children>
+                                        <VBox prefHeight="200.0" prefWidth="356.0">
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                                                    <VBox.margin>
+                                                        <Insets left="4.0" top="7.0" />
+                                                    </VBox.margin>
+                                                    <children>
+                                                        <Label text="Title:" />
+                                                        <TextField fx:id="appointmentTitle" editable="false" prefWidth="240.0">
+                                                            <HBox.margin>
+                                                                <Insets left="12.0" />
+                                                            </HBox.margin>
+                                                        </TextField>
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="90.0" prefWidth="200.0">
+                                                    <VBox.margin>
+                                                        <Insets top="7.0" />
+                                                    </VBox.margin>
+                                                    <children>
+                                                        <Label text="Details:">
+                                             <HBox.margin>
+                                                <Insets left="14.0" />
+                                             </HBox.margin></Label>
+                                                        <TextArea fx:id="summary" editable="false" maxHeight="75.0" prefHeight="60.0" prefWidth="240.0" wrapText="true">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" />
+                                                            </HBox.margin>
+                                                        </TextArea>
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
+                                                    <VBox.margin>
+                                                        <Insets top="7.0" />
+                                                    </VBox.margin>
+                                                    <children>
+                                                        <Label text="Location:">
+                                                            <HBox.margin>
+                                                                <Insets left="4.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="location" editable="false" prefWidth="242.0">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" />
+                                                            </HBox.margin>
+                                                        </TextField>
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label text="URL:">
+                                                            <HBox.margin>
+                                                                <Insets left="28.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="url" editable="false" prefWidth="242.0">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" />
+                                                            </HBox.margin>
+                                                        </TextField>
+                                                    </children>
+                                                    <VBox.margin>
+                                                        <Insets top="7.0" />
+                                                    </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label text="Type:">
+                                                            <HBox.margin>
+                                                                <Insets left="23.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="category" editable="false" prefWidth="242.0">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" />
+                                                            </HBox.margin>
+                                                        </TextField>
+                                                    </children>
+                                                    <VBox.margin>
+                                                        <Insets top="7.0" />
+                                                    </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label text="Contact:">
+                                                            <HBox.margin>
+                                                                <Insets left="8.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="contact" editable="false" prefWidth="242.0">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" />
+                                                            </HBox.margin>
+                                                        </TextField>
+                                                    </children>
+                                                    <VBox.margin>
+                                                        <Insets top="7.0" />
+                                                    </VBox.margin>
+                                                </HBox>
+                                            </children>
+                                            <HBox.margin>
+                                                <Insets top="17.0" />
+                                            </HBox.margin>
+                                        </VBox>
+                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="356.0">
+                                            <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label text="Begin:">
+                                                            <HBox.margin>
+                                                                <Insets left="17.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="begin" editable="false" prefWidth="220.0">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" />
+                                                            </HBox.margin>
+                                                        </TextField>
+                                                    </children>
+                                                    <VBox.margin>
+                                                        <Insets top="7.0" />
+                                                    </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label text="End:">
+                                                            <HBox.margin>
+                                                                <Insets left="27.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="end" editable="false" prefWidth="220.0">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" />
+                                                            </HBox.margin>
+                                                        </TextField>
+                                                    </children>
+                                                    <VBox.margin>
+                                                        <Insets top="7.0" />
+                                                    </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label text="Created:">
+                                                            <HBox.margin>
+                                                                <Insets left="6.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="created" editable="false" prefWidth="220.0">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" />
+                                                            </HBox.margin>
+                                                        </TextField>
+                                                    </children>
+                                                    <VBox.margin>
+                                                        <Insets top="7.0" />
+                                                    </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label text="By:">
+                                                            <HBox.margin>
+                                                                <Insets left="34.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="createdBy" editable="false" prefWidth="220.0">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" />
+                                                            </HBox.margin>
+                                                        </TextField>
+                                                    </children>
+                                                    <VBox.margin>
+                                                        <Insets top="7.0" />
+                                                    </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label text="Updated:" />
+                                                        <TextField fx:id="updated" editable="false" prefWidth="220.0">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" />
+                                                            </HBox.margin>
+                                                        </TextField>
+                                                    </children>
+                                                    <VBox.margin>
+                                                        <Insets top="7.0" />
+                                                    </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label text="By:">
+                                                            <HBox.margin>
+                                                                <Insets left="34.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="updatedBy" editable="false" prefWidth="220.0">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" />
+                                                            </HBox.margin>
+                                                        </TextField>
+                                                    </children>
+                                                    <VBox.margin>
+                                                        <Insets top="7.0" />
+                                                    </VBox.margin>
+                                                </HBox>
+                                            </children>
+                                            <HBox.margin>
+                                                <Insets top="30.0" />
+                                            </HBox.margin>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                    <styleClass>
+                        <String fx:value="noscroll" />
+                        <String fx:value="noselect" />
+                    </styleClass>
+                </VBox>
+                <ButtonBar id="border" buttonMinWidth="80.0" minHeight="50.0" prefHeight="50.0" prefWidth="1000.0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                    <buttons>
+                        <Button fx:id="newAppointment" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="New" />
+                        <Button fx:id="editAppointment" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Edit" />
+                        <Button fx:id="deleteAppointment" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Delete" />
+                    </buttons>
+                    <GridPane.margin>
+                        <Insets bottom="20.0" left="80.0" right="80.0" top="20.0" />
+                    </GridPane.margin>
+                    <padding>
+                        <Insets bottom="5.0" right="10.0" top="5.0" />
+                    </padding>
+                </ButtonBar>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>
